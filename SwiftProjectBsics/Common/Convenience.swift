@@ -8,38 +8,38 @@
 
 import UIKit
 
-func print(items: Any..., separator: String = " ", terminator: String = "\n") {
+public func print(items: Any..., separator: String = " ", terminator: String = "\n") {
     #if DEBUG
         Swift.print(items[0], separator:separator, terminator: terminator)
     #endif
 }
 
 #if arch(i386) || arch(x86_64)
-let isSimulator = true
+public let isSimulator = true
 #else
-let isSimulator = false
+public let isSimulator = false
 #endif
 
-let AppDelegateInstance : BaseAppDelegate = UIApplication.shared.delegate as! BaseAppDelegate
-let DocumentsPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
+public let AppDelegateInstance : BaseAppDelegate = UIApplication.shared.delegate as! BaseAppDelegate
+public let DocumentsPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
 
-let _scale = UIScreen.main.scale
-let _SW :CGFloat = min(UIScreen.main.bounds.width, UIScreen.main.bounds.height)
-let _SH :CGFloat = max(UIScreen.main.bounds.width, UIScreen.main.bounds.height)
+public let _scale = UIScreen.main.scale
+public let _SW :CGFloat = min(UIScreen.main.bounds.width, UIScreen.main.bounds.height)
+public let _SH :CGFloat = max(UIScreen.main.bounds.width, UIScreen.main.bounds.height)
 
-let isIpad = UIDevice.current.userInterfaceIdiom == .pad
-let isIphone = UIDevice.current.userInterfaceIdiom == .phone
-let systemVersion = UIDevice.current.systemVersion 
+public let isIpad = UIDevice.current.userInterfaceIdiom == .pad
+public let isIphone = UIDevice.current.userInterfaceIdiom == .phone
+public let systemVersion = UIDevice.current.systemVersion
 
 
-let iphone4  = (_SH == 480.0)
-let iphone5  = (_SH == 568.0)
-let iphone6  = (_SH == 667.0)
-let iphone6p = (_SH == 736.0)
-let iphoneX  = (_SH == 812.0)
+public let iphone4  = (_SH == 480.0)
+public let iphone5  = (_SH == 568.0)
+public let iphone6  = (_SH == 667.0)
+public let iphone6p = (_SH == 736.0)
+public let iphoneX  = (_SH == 812.0)
 
-let _TOP :CGFloat = iphoneX ? 88 : 64
-let _BARH :CGFloat = iphoneX ? 83 : 49
+public let _TOP :CGFloat = iphoneX ? 88 : 64
+public let _BARH :CGFloat = iphoneX ? 83 : 49
 
 public func _scaleMiddle(_ v: CGFloat) -> CGFloat{return (v * (_SW/375))}
 public func _S(_ format: String, args: CVarArg...) -> String {return String.init(format: format, args)}
