@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/ssTaoz/SwiftProjectBsics'
+  s.homepage         = 'https://github.com/AsTao/SwiftProjectBsics'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'ssTaoz' => '236048180@qq.com' }
@@ -32,11 +32,6 @@ TODO: Add long description of the pod here.
   s.resources = 'SwiftProjectBsics/Assets/SwiftResource.bundle'
   s.source_files = 'SwiftProjectBsics/Http/*','SwiftProjectBsics/Common/*','SwiftProjectBsics/Extentions/*' ,'SwiftProjectBsics/Base/*'
   
-  # s.resource_bundles = {
-  #   'SwiftProjectBsics' => ['SwiftProjectBsics/Assets/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
   s.frameworks = 'UIKit', 'Foundation' , 'CoreGraphics'
   s.dependency 'Alamofire'
   s.dependency 'CryptoSwift'
