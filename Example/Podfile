@@ -1,0 +1,6 @@
+use_frameworks!
+
+target 'SwiftProjectBsics_Example' do
+  pod 'SwiftProjectBsics', :path => '../'
+
+end
